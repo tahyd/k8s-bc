@@ -1,0 +1,16 @@
+kubectl create deployment nginx-deployment  --image=nginx:latest
+kubectl get pods
+>kubectl describe pod nginx-deployment-bc64dffbd-48j4cest
+>kubectl logs nginx-deployment-bc64dffbd-48j4c
+kubectl api-resources | grep pod
+kubectl  get deployments 
+kubectl  get deployments  -o wide
+kubectl  get deployments -o yaml
+kubectl  get deployments -o json 
+
+ 
+ kubectl exec -it nginx-deployment-bc64dffbd-48j4c -- /bin/bas
+
+
+kubectl expose deployment  nginx-deployment --type=NodePort --port=80
+kubectl apply -f nginx-pod.yaml
