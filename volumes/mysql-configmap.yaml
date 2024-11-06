@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: mysql-cm
+data:
+ username: root
+ database: k8s_ems
